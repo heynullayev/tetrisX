@@ -1,6 +1,6 @@
 class Colors:
     """
-    Provides color representations used in the game.
+    Предоставляет все цвета используемы в игре.
 
     - `dark_grey`: RGB tuple representing dark grey color.
     - `green`: RGB tuple representing green color.
@@ -32,7 +32,7 @@ class Colors:
     @classmethod
     def get_cell_colors(cls):
         """
-        Get a list of predefined colors for cells.
+        Получение списка предоставленных цветов для ячеек.
 
         :returns: List of RGB tuples representing various cell colors.
         :rtype: list
