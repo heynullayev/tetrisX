@@ -5,7 +5,7 @@ from position import Position
 
 class Block:
     """
-    Represents a block in the game.
+    Представляет блок.
 
     :param id: The identifier of the block.
     :type id: int
@@ -21,19 +21,18 @@ class Block:
 
     def move(self, rows, columns):
         """
-        Move the block by the specified number of rows and columns.
-
+        Перемещает блок на определенное количество строк и столбцов
         :param rows: The number of rows to move the block.
         :type rows: int
         :param columns: The number of columns to move the block.
         :type columns: int
         """
-        self.row_offset += rows
-        self.column_offset += columns
+        self.row_offset += rows #обновление смещения по строкам
+        self.column_offset += columns #по столбцам
 
     def get_cell_positions(self):
         """
-        Get the positions of cells in the block.
+        Получает позиции блока.
 
         :returns: List of Position objects representing cell positions.
         :rtype: list[Position]
@@ -47,8 +46,7 @@ class Block:
 
     def rotate(self):
         """
-        Rotate the block.
-
+        Вращение блока
         :returns: None
         """
         self.rotation_state += 1
@@ -57,7 +55,7 @@ class Block:
 
     def undo_rotation(self):
         """
-        Undo the last rotation of the block.
+        Препятствывает последнему вращению
 
         :returns: None
         """
@@ -67,7 +65,7 @@ class Block:
 
     def draw(self, screen, offset_x, offset_y):
         """
-        Draw the block on the screen.
+        Вырисовка блоков на экране
 
         :param screen: The pygame screen to draw on.
         :type screen: pygame.Surface
