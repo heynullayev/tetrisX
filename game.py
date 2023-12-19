@@ -6,9 +6,7 @@ import pygame
 
 class Game:
     """
-       Represents the main game control and mechanics.
-
-       Initializes the game with a grid, blocks, and game state.
+       Основная механика игры
 
        :ivar grid: The grid object managing the game board.
        :vartype grid: Grid
@@ -43,7 +41,7 @@ class Game:
 
     def update_score(self, lines_cleared, move_down_points):
         """
-                Update the player's score based on cleared lines and downward movement.
+                Прибавление счета к игракам, после удаления нижней строки.
 
                 :param lines_cleared: The number of lines cleared.
                 :type lines_cleared: int
@@ -62,7 +60,7 @@ class Game:
 
     def get_random_block(self):
         """
-                Retrieve a random block from the available blocks.
+                Получение блока случайным образом
 
                 :returns: A random block object.
                 :rtype: Block
@@ -75,7 +73,7 @@ class Game:
 
     def move_left(self):
         """
-                Move the current block to the left if possible.
+                Перемещение блока влево, если он не находится у стены.
 
                 :returns: None
                 :rtype: None
@@ -87,7 +85,7 @@ class Game:
 
     def move_right(self):
         """
-        Move the current block to the right if possible.
+        Перемещение блока вправо, если он не находится у стены.
 
         :returns: None
         :rtype: None
@@ -99,7 +97,7 @@ class Game:
 
     def move_down(self):
         """
-        Move the current block downwards if possible and lock it in place if it cannot move further down.
+        Перемещение блока вниз, если он не находится у окончанчания игрового поля. И фиксация блока.
 
         :returns: None
         :rtype: None
@@ -112,7 +110,7 @@ class Game:
 
     def lock_block(self):
         """
-        Lock the current block in place, update the grid, and handle clearing full rows.
+        Фиксация текущего блока на месте, обновление счета играка, и удаление заполненных строк сетки
 
         :returns: None
         :rtype: None
@@ -131,7 +129,7 @@ class Game:
 
     def reset(self):
         """
-        Reset the game state to the initial setup.
+        Сброска игры к начальному исходу
 
         :returns: None
         :rtype: None
@@ -144,7 +142,7 @@ class Game:
 
     def block_fits(self):
         """
-        Check if the current block fits within the grid boundaries.
+        Проверка, помещается ли блок в границы сетки
 
         :returns: Boolean indicating if the block fits.
         :rtype: bool
@@ -157,7 +155,7 @@ class Game:
 
     def rotate(self):
         """
-        Rotate the current block clockwise if possible.
+        Проверка возможности переворотов по часовой стрелки
 
         :returns: None
         :rtype: None
@@ -171,7 +169,7 @@ class Game:
 
     def block_inside(self):
         """
-        Check if the current block is inside the grid boundaries.
+        Проверка нахождения текущего блока в границах сетки.
 
         :returns: Boolean indicating if the block is inside.
         :rtype: bool
@@ -184,7 +182,7 @@ class Game:
 
     def draw(self, screen):
         """
-        Draw the game elements on the screen.
+        Вырисовка элементов игры на экране.
 
         :param screen: Pygame screen object to draw on.
         :type screen: pygame.Surface
