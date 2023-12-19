@@ -12,7 +12,7 @@ class Grid:
 
     def print_grid(self):
         """
-        Print the contents of the grid.
+        Печать содержимого сетки
 
         :returns: None
         :rtype: None
@@ -24,7 +24,7 @@ class Grid:
 
     def is_inside(self, row, column):
         """
-        Check if a given row and column are inside the grid boundaries.
+        Проверка нахождения заданной строки си столбца внутри границ сетки
 
         :param row: The row index to check.
         :type row: int
@@ -39,7 +39,7 @@ class Grid:
 
     def is_empty(self, row, column):
         """
-        Check if a specific cell in the grid is empty.
+        Проверка, пуста ли определенная ячейка в сетке
 
         :param row: The row index to check.
         :type row: int
@@ -54,7 +54,7 @@ class Grid:
 
     def is_row_full(self, row):
         """
-        Check if a row in the grid is completely filled.
+        Проверка полного заполнения ряда в сетке
 
         :param row: The row index to check.
         :type row: int
@@ -68,7 +68,7 @@ class Grid:
 
     def clear_row(self, row):
         """
-        Clear the contents of a specific row in the grid.
+        Очищение ряда в сетке
 
         :param row: The row index to clear.
         :type row: int
@@ -80,7 +80,7 @@ class Grid:
 
     def move_row_down(self, row, num_rows):
         """
-        Move a row and the rows above it downwards by a specified number of rows.
+        Перемещение рядов и расположенных над ним, на указанное количество рядов
 
         :param row: The row index to start the movement.
         :type row: int
@@ -95,7 +95,7 @@ class Grid:
 
     def clear_full_rows(self):
         """
-        Clear all full rows in the grid and move rows down accordingly.
+        Очищение заполненных рядов в сетке, и соответствующе переместите вниз
 
         :returns: The number of rows cleared.
         :rtype: int
@@ -111,7 +111,7 @@ class Grid:
 
     def reset(self):
         """
-        Reset the grid by setting all cells to empty (0).
+        Сбросить сетку, установив для всех ячеек значение "empty" (0)
 
         :returns: None
         :rtype: None
@@ -122,7 +122,7 @@ class Grid:
 
     def draw(self, screen):
         """
-        Draw the grid on the screen.
+        Вырисовка сетки на экран
 
         :param screen: Pygame screen object to draw on.
         :type screen: pygame.Surface
