@@ -1,6 +1,6 @@
 import pytest
 from unittest.mock import Mock, patch
-from game import Game  # Replace with your actual module name
+from game import Game  
 
 @pytest.fixture
 def game():
@@ -9,10 +9,10 @@ def game():
 
 def test_update_score(game):
     game.update_score(1, 10)
-    assert game.score == 110  # 100 for line clear, 10 for move down
+    assert game.score == 110  
 
     game.update_score(2, 5)
-    assert game.score == 415  # 300 for two lines clear, 5 for move down
+    assert game.score == 415  
 
 def test_get_random_block(game):
     initial_length = len(game.blocks)
